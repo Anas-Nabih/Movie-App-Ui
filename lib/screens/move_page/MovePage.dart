@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'movies_app_screen.dart';
+import '../movies_app_screen/MoviesAppScreen.dart';
 
 class MoviePage extends StatefulWidget {
   final title, rate, imgPath;
@@ -26,16 +26,14 @@ class _MoviePageState extends State<MoviePage> {
                     IconButton(icon:Icon(Icons.arrow_back_ios,color: Colors.white,size: 15,) ,
                         onPressed: (){
                       Navigator.push(context,MaterialPageRoute(
-                        builder: (context) {
-                          return MoviesAppScreen();
-                        }
+                        builder: (context)=>MoviesAppScreen()
                       ));
                         }),
                     Container(
                       margin: EdgeInsets.only(top: size.height *0.7 ),
                       height: 650,
                       decoration: BoxDecoration(
-                          color: Colors.grey[300],
+                          color: Colors.grey[200],
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25),
